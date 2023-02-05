@@ -1,0 +1,36 @@
+.sideBar{
+    flex:3;
+    margin: 20px;
+    padding-bottom: 20px;
+    background-color:aliceblue;
+    border-radius: 5%;
+}
+
+.sideBar img{
+    max-height: 100px;
+    margin: 5px;
+}
+
+.sideBarIcons{
+    margin: 0 3px;
+}
+
+.sideBarItem{
+    margin: 5px;
+}
+
+.sideBarTitle{
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    font-family: 'Varela', sans-serif;;
+}
+
+.sideBarList{
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.sideBar li{
+    display: inline-block;
+    width: 50%;
+}

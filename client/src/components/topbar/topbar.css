@@ -1,0 +1,70 @@
+.top{
+    /* background-color: blue; */
+    max-height: 45px;
+    /* padding: 5px; */
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.top1{
+    flex:3;
+    display: flex;
+    justify-content: center;
+}
+
+.top2{
+    flex:6;
+    display: flex;
+    justify-content: center;
+}
+
+.top3{
+    flex:3;
+    display: flex;
+    justify-content: center;
+}
+
+.topOptions{
+    display: flex;
+    justify-content: center;
+    margin:0;
+    padding: 0;
+}
+.topOption{
+    margin: 0 10px;
+    font-size: 20px;
+    font-weight: 250;
+    cursor: pointer;
+}
+
+.topImage{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+
+#topSearchIcon{
+    cursor: pointer;
+    margin-top: 20px;
+    margin-right: 15px; 
+}
+
+.topIcons{
+    margin: 0 3px;
+}
+
+.topOptionLR{
+    margin: 13px 10px;
+    font-size: 20px;
+    font-weight: 250;
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
+}

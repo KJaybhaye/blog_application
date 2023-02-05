@@ -1,0 +1,65 @@
+.singlePost {
+    flex: 9;
+}
+  
+.postWrapper {
+    padding: 20px;
+    padding-right: 0;
+}
+  
+.postImage {
+    width: 90%;
+    max-height: 300px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin:0 5% 0 5%;
+}
+  
+.postTitle {
+    text-align: center;
+    margin: 10px;
+    font-size: 28px;
+    font-family: "Lora", sans-serif;
+}
+  
+.postEdit{
+    float: right;
+    font-size: 16px;
+}
+  
+.postIcon{
+    margin-left: 10px;
+    cursor: pointer;
+}
+  
+.postIcon:first-child {
+    color: rgb(2, 69, 69);
+}
+.postIcon:last-child {
+    color: rgb(195, 49, 49);
+}
+  
+.postInfo {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #be9656;
+    font-family: "Varela Round", Arial, Helvetica, sans-serif;
+}
+  
+.postAuthor{
+    margin-left: 5px;
+}
+  
+.postBody {
+    color: #666;
+    font-size: 18px;
+    line-height: 25px;
+}
+  
+.postBody::first-letter {
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: 600;
+}
