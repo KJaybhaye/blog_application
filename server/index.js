@@ -31,28 +31,47 @@ app.use("/api/v1/posts", posts);
 app.use("/api/v1/cats", cats);
 app.use("/api/v1/auth", auth);
 
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, '/images')
-    },
-    filename: function (req, file, cb) {
-      const uniqueSuffix = Math.round(Math.random() * 1E9)
-      cb(null, file.fieldname + '-' + uniqueSuffix)
-    }
-  })
+// const storage = multer.diskStorage({
+//     destination: function (req, file, cb) {
+//       cb(null, '/images')
+//     },
+//     filename: function (req, file, cb) {
+//       const uniqueSuffix = Math.round(Math.random() * 1E9)
+//       cb(null, file.fieldname + '-' + uniqueSuffix + ".jpeg")
+//     }
+//   })
   
-const upload = multer({ storage: storage })
+// const upload = multer({ storage: storage })
   
 
-app.post("/api/v1/upload", upload.single("file"), (req, res) => {
-    // console.log(upload);
-    res.status(200).json("File has been uploaded");
-  });
+// app.post("/api/v1/upload", upload.single("file"), (req, res) => {
+//     // console.log(upload);
+//     res.status(200).json("File has been uploaded");
+//   });
 
 // app.use(notFound);
 // app.use(errorHandler);
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, __dirname + '/images')      //you tell where to upload the files,
+  },
+  filename: function (req, file, cb) {
+    cb(null, req.body.name)
+  }
+})
 
+var upload = multer({storage: storage,
+    onFileUploadStart: function (file) {
+      console.log(file.originalname + ' is starting ...')
+    },
+});
 
+app.post('/api/v1/upload', upload.single('file'), function (req, res, next) {
+  // req.file is the `avatar` file
+  // console.log(req.file);
+  // return false;
+  res.send("image uploaded!");
+})
 const start = async () => {
     try{
         await connectDB(process.env.MONGO_URI);
