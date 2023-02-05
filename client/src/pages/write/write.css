@@ -1,42 +1,54 @@
-.write{
+.write {
     padding-top: 50px;
-}
-
-.writeForm{
+  }
+  
+  .writeImg {
+    margin-left: 150px;
+    width: 70vw;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .writeForm {
     position: relative;
-}
-
-.writeForm1{
+  }
+  
+  .writeFormGroup {
     margin-left: 150px;
     display: flex;
     align-items: center;
-}
-
-.addIcon{
+  }
+  
+  .writeIcon {
     width: 25px;
     height: 25px;
-    border: 1px solid rgb(149, 142, 142);
     border-radius: 50%;
-    cursor: pointer;
-
+    border: 1px solid;
     display: flex;
-    justify-content: center;
     align-items: center;
-}
-
-.writeInput{
+    justify-content: center;
+    font-size: 20px;
+    color: rgb(121, 118, 118);
+    cursor: pointer;
+  }
+  
+  .writeInput {
     font-size: 30px;
     border: none;
     padding: 20px;
     width: 70vw;
-}
-  
-.writeInput::placeholder{
-    color: rgb(189, 185, 185);
-    font-weight: 400;
-}
+  }
 
-.publish{
+  .writeText {
+    font-size: 20px;
+    border: none;
+    padding: 20px;
+    width: 70vw;
+    height: 30vw;
+  }
+
+  .publish{
     position: absolute;
     top: 20px;
     right: 50px;
@@ -50,19 +62,3 @@
     display: flex;
     align-items: center;
 }
-
-#writeImg {
-    margin-left: 180px;
-    width: 70vw;
-    height: 250px;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-.textInput {
-    width: 70vw;
-    height: 100vh;
-    font-family: inherit;
-    font-size: 20px;
-}
-  

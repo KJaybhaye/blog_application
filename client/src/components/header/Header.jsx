@@ -6,8 +6,8 @@ export default class Header extends Component {
     return (
       <div className='header'>
         <div className='headTitles'>
-            <span className='headTitle1'>Title 1</span>
-            <span className='headTitle2'>Title 2</span>
+            <span className='headTitle1'>React And Node App</span>
+            <span className='headTitle2'>Blogs</span>
         </div>
         <img className='headerImage' src='https://cdn.pixabay.com/photo/2018/02/23/22/04/book-bindings-3176776_1280.jpg'/>
       </div>

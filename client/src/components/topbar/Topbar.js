@@ -1,45 +1,72 @@
 import React, { Component } from 'react';
 import "./topbar.css";
 import {Link} from "react-router-dom";
+import { useContext } from "react";
+import { Context } from "../../context/Context";
 
-export default class Topbar extends Component {
-  render() {
-    const user = true;
+export default function Topbar(){
+        const { user, dispatch } = useContext(Context);
+        const PF = "http://localhost:5000/images/"
+      
+        const handleLogout = () => {
+          dispatch({ type: "LOGOUT" });
+    };
     return (
-        <div className='top'>
-            <div className='top1'>
-            <i className="topIcons fa-brands fa-github"></i>
-            <i className="topIcons fa-brands fa-linkedin"></i>
-            <i className="topIcons fa-brands fa-reddit"></i>
-            <i className="topIcons fa-brands fa-discord"></i>
-            </div>
-            <div className='top2'>
-                <div className='topOptions'>
-                    <div className='topOption'>
-                        <Link to="/" className='link'>HOME</Link>
-                    </div>
-                    <div className='topOption'>
-                        <Link to="/write" className='link'>WRITE</Link>
-                    </div>
-                    <div className='topOption'>
-                        <Link className='link' to="/settings">SETTINGS</Link>
-                    </div>
-                    <div className='topOption'>
-                        <Link className='link' to={user ?"/register" :"/"}>{user && "LOGOUT"}</Link>
-                    </div>
-                </div>
-            </div>
-            <div className='top3'>
-                <i className="fa-solid fa-magnifying-glass" id='topSearchIcon'></i>
-                {user ? <img className="topImage" src="https://cdn.pixabay.com/photo/2015/04/25/23/32/wormhole-739872_1280.png" alt="topImgage"></img>
-                : <div className='topOptions'>
-                    <div className='topOptionLR' to="./login"><Link className='link' to="./login">LOGIN</Link></div>
-                    <div className='topOptionLR' to="./register"><Link className='link' to="./register">REGISTER</Link></div>
-                </div>
-                }
-                
-            </div>
-        </div>
+        <div className="top">
+      <div className="topLeft">
+        <a href='https://www.linkedin.com/in/krushna-jaybhaye-b0170a230'><i className="topIcon fab fa-linkedin"></i></a>
+        <a href='https://github.com/KJaybhaye'><i className="topIcon fab fa-github"></i></a>
+        <a href=''><i className="topIcon fab fa-reddit"></i></a>
+        <a href=''><i className="topIcon fab fa-discord"></i></a>
+      </div>
+      <div className="topCenter">
+        <ul className="topList">
+          <li className="topListItem">
+            <Link className="link" to="/">
+              HOME
+            </Link>
+          </li>
+          <li className="topListItem">
+            <Link className="link" to="/">
+              ABOUT
+            </Link>
+          </li>
+          <li className="topListItem">
+            <Link className="link" to="/">
+              CONTACT
+            </Link>
+          </li>
+          <li className="topListItem">
+            <Link className="link" to="/write">
+              WRITE
+            </Link>
+          </li>
+          <li className="topListItem" onClick={handleLogout}>
+            {user && "LOGOUT"}
+          </li>
+        </ul>
+      </div>
+      <div className="topRight">
+        {user ? (
+          <Link to="/settings">
+            <img className="topImg" src={PF+user.profilePic} alt="" />
+          </Link>
+        ) : (
+          <ul className="topList">
+            <li className="topListItem">
+              <Link className="link" to="/login">
+                LOGIN
+              </Link>
+            </li>
+            <li className="topListItem">
+              <Link className="link" to="/register">
+                REGISTER
+              </Link>
+            </li>
+          </ul>
+        )}
+        <i className="topSearchIcon fas fa-search"></i>
+      </div>
+    </div>
     )
   }
-}
