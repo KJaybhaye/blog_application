@@ -6,7 +6,7 @@ export default class SinglePost extends Component {
     return (
       <div className='singlePost'>
         <div className="postWrapper">
-            <img src="https://cdn.pixabay.com/photo/2020/06/19/22/33/wormhole-5319067__480.jpg" alt="postImage" className="postImage" />
+            <img src="https://images.pexels.com/photos/7647583/pexels-photo-7647583.jpeg?auto=compress&cs=tinysrgb&w=600" alt="postImage" className="postImage" />
         </div>
         <h1 className="postTitle">
             this is the title

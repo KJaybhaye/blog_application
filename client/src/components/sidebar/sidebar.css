@@ -7,22 +7,26 @@
 }
 
 .sideBar img{
-    max-height: 100px;
-    margin: 5px;
+    max-width: 70%;
+    /* text-align: center; */
+    /* margin-left: 5%; */
 }
 
 .sideBarIcons{
-    margin: 0 3px;
+    margin-right: 25px;
 }
 
 .sideBarItem{
-    margin: 5px;
+    /* margin: 5px; */
+    margin-right: 19px;
+    text-align: center;
 }
 
 .sideBarTitle{
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
-    font-family: 'Varela', sans-serif;;
+    font-family: 'Varela', sans-serif;
+    text-align: center;
 }
 
 .sideBarList{
@@ -32,5 +36,6 @@
 
 .sideBar li{
     display: inline-block;
-    width: 50%;
+    width: 49%;
+    text-align: center;
 }

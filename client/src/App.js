@@ -13,7 +13,7 @@ import {
 } from "react-router-dom";
 
 function App() {
-  const currentUser = false;
+  const currentUser = true;
   return (
     <div className="App">
       <Router>

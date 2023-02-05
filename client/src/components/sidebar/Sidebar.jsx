@@ -7,7 +7,8 @@ export default class Sidebar extends Component {
       <div className='sideBar'>
         <div className='sideBarItem'>
             <div className='sideBarTitle'>ABOUT ME</div>
-            <img src="https://cdn.pixabay.com/photo/2015/04/25/23/32/wormhole-739872_1280.png"/>
+            <img src="https://images.pexels.com/photos/3933986/pexels-photo-3933986.jpeg?auto=compress&cs=tinysrgb&w=600"
+             alt="sidebar_image"/>
             <p>really long random intorudction helsh</p>
         </div>
         <div className='sideBarItem'>

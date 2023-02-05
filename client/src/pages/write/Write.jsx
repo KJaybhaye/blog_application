@@ -5,7 +5,7 @@ export default class Write extends Component {
   render() {
     return (
       <div className='write'>
-        <img src="https://cdn.pixabay.com/photo/2020/06/19/22/33/wormhole-5319067__480.jpg" alt="" id="writeImg" />
+        <img src="https://images.pexels.com/photos/7647583/pexels-photo-7647583.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" id="writeImg" />
         <form className="writeForm">
           <div className="writeForm1">
             <label htmlFor="fileInput" id="fileInputLabel"><i class="addIcon fa-solid fa-plus"></i></label>
