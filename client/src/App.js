@@ -15,6 +15,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import About from "./pages/about/About";
 
 function App() {
   const { user } = useContext(Context);
@@ -30,7 +31,7 @@ function App() {
         <Route path="/post/:id" element={<PostPage />}/>
         <Route path="/write" element={user ? <Write /> : <Login/>}/>
         <Route path="/settings" element={user ? <Settings /> : <Login/>}/>
-        {/* <Route path="./logout" element={<Register />}/>s */}
+        <Route path="./logout" element={<Register />}/>
       </Routes>
       </Router>
     </div>

@@ -24,13 +24,13 @@ export default function Sidebar(){
             <div className='sideBarTitle'>ABOUT ME</div>
             <img src="https://images.pexels.com/photos/3933986/pexels-photo-3933986.jpeg?auto=compress&cs=tinysrgb&w=600"
              alt="sidebar_image"/>
-            <p>really long random intorudction helsh</p>
+            <p>Hello, I am a programmer. My skills include Machine Learning and Web development.</p>
         </div>
         <div className='sideBarItem'>
             <div className='sideBarTitle'>CATEGORIES</div>
             <ul className='sideBarList'>
             {cats.map((c) => (
-            <Link to={`/?cat=${c.name}`} className="link">
+            <Link key={c.name} to={`/?cat=${c.name}`} className="link">
             <li className="sidebarListItem">{c.name}</li>
             </Link>
           ))}
