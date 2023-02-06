@@ -24,7 +24,7 @@ const app = express();
 // // note express.json etc before routing with use
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
-app.use("/images", express.static(path.join(__dirname, "/images")));
+app.use("/api/v1/images", express.static(path.join(__dirname, "/images")));
 
 app.use("/api/v1/users", users);
 app.use("/api/v1/posts", posts);
