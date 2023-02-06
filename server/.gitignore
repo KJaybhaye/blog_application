@@ -6,6 +6,9 @@
 /.jpeg
 .jpeg
 
+**/*.jpg
+**/*.jpeg
+
 # testing
 /coverage
 
