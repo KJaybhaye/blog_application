@@ -2,7 +2,7 @@
 .top {
     width: 100%;
     max-height: 50px;
-    background-color: white;
+    background-color:rgb(249, 244, 238);
     position: sticky;
     top: 0;
     display: flex;
