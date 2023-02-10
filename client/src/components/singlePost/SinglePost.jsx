@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 import "./singlePost.css";
 import { useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import { Context } from "../../context/Context";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+// import { API_URL } from "../../App";
 
 export default function SinglePost(){
   const location = useLocation();
@@ -18,7 +19,7 @@ export default function SinglePost(){
 
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get("/posts/" + path);
+      const res = await axios.get(`/posts/` + path);
       setPost(res.data);
       setTitle(res.data.title);
       setDesc(res.data.desc);
@@ -61,7 +62,7 @@ export default function SinglePost(){
             onChange={(e) => setTitle(e.target.value)}
           />
         ) : (
-          <h1 className="postTitle">
+          <h1 className="singlepostTitle">
             {title}
             {post.username === user?.username && (
               <div className="postEdit">

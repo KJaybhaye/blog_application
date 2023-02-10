@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 import "./topbar.css";
 import {Link} from "react-router-dom";
 import { useContext } from "react";
@@ -16,8 +16,8 @@ export default function Topbar(){
       <div className="topLeft">
         <a href='https://www.linkedin.com/in/krushna-jaybhaye-b0170a230'><i className="topIcon fab fa-linkedin"></i></a>
         <a href='https://github.com/KJaybhaye'><i className="topIcon fab fa-github"></i></a>
-        <a href=''><i className="topIcon fab fa-reddit"></i></a>
-        <a href=''><i className="topIcon fab fa-discord"></i></a>
+        <i className="topIcon fab fa-reddit"></i>
+        <i className="topIcon fab fa-discord"></i>
       </div>
       <div className="topCenter">
         <ul className="topList">
@@ -31,11 +31,11 @@ export default function Topbar(){
               ABOUT
             </Link>
           </li>
-          <li className="topListItem">
+          {/* <li className="topListItem">
             <Link className="link" to="/">
               CONTACT
             </Link>
-          </li>
+          </li> */}
           <li className="topListItem">
             <Link className="link" to="/write">
               WRITE

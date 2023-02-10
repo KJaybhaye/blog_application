@@ -5,17 +5,18 @@ import Write from "./pages/write/Write";
 import Settings from "./pages/settings/Settings";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
-import { useLocation } from "react-router";
+// import { useLocation } from "react-router";
 import { useContext } from "react";
 import { Context } from "./context/Context";
 
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
-import About from "./pages/about/About";
+// import About from "./pages/about/About";
+
+export const API_URL = "https://blog-api-qbv8.onrender.com/api/v1"
 
 function App() {
   const { user } = useContext(Context);

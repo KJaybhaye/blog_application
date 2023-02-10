@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 import "./sidebar.css";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -39,8 +39,8 @@ export default function Sidebar(){
         <div className='sideBarItem'>
             <div className='sideBarTitle'>FOLLOW ME</div>
             <ul className='sideBarList'>
-            <i className="sideBarIcons fa-brands fa-github"></i>
-            <i className="sideBarIcons fa-brands fa-linkedin"></i>
+            <a href='https://www.linkedin.com/in/krushna-jaybhaye-b0170a230'><i className="sideBarIcons fa-brands fa-github"></i></a>
+            <a href='https://github.com/KJaybhaye'><i className="sideBarIcons fa-brands fa-linkedin"></i></a>
             <i className="sideBarIcons fa-brands fa-reddit"></i>
             <i className="sideBarIcons fa-brands fa-discord"></i>
             </ul>

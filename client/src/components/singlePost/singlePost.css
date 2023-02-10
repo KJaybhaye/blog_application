@@ -15,11 +15,13 @@
     margin:0 5% 0 5%;
 }
   
-.postTitle {
+.singlepostTitle {
     text-align: center;
     margin: 10px;
     font-size: 28px;
     font-family: "Lora", sans-serif;
+    margin-top: 140px;
+    margin-left: 50px;
 }
   
 .postEdit{
@@ -56,6 +58,7 @@
     color: #666;
     font-size: 18px;
     line-height: 25px;
+    margin-left: 200px;
 }
   
 .postBody::first-letter {
@@ -64,7 +67,7 @@
     font-weight: 600;
 }
 
-.postTitleInput {
+.singlepostTitleInput {
     margin: 10px;
     font-family: "Lora", serif;
     font-size: 28px;
@@ -72,9 +75,10 @@
     border: none;
     color: gray;
     border-bottom: 1px solid lightgray;
+    margin-left: 400px;
   }
 
-  .postTitleInput:focus {
+  .singlepostTitleInput:focus {
     outline: none;
   }
 
@@ -89,6 +93,7 @@
     color: #666;
     font-size: 18px;
     line-height: 25px;
+    margin-left: 200px;
   }
   
   .postBodyInput:focus {
@@ -105,4 +110,5 @@
     cursor: pointer;
     align-self: flex-end;
     margin-top: 20px;
+    margin-left: 1000px;
   }

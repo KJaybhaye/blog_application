@@ -3,7 +3,7 @@
   }
   
   .writeImg {
-    margin-left: 150px;
+    margin-left: 195px;
     width: 70vw;
     height: 250px;
     border-radius: 10px;
@@ -44,6 +44,7 @@
     font-size: 20px;
     border: none;
     padding: 20px;
+    margin-left: 25px;
     width: 70vw;
     height: 30vw;
   }
