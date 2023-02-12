@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import "./post.css"
+import "./post.css";
+import { API_URL } from "../../App";
 
 export default function Post({ post }) {
-  const PF = "http://localhost:5000/api/v1/images/";
+  const PF = `${API_URL}/images/`;
   return (
     <div className="post">
       {post.photo && <img className="postImg" src={PF + post.photo} alt="" />}

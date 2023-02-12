@@ -20,6 +20,7 @@ export default function Write() {
     if (file) {
       const data =new FormData();
       const filename = Date.now() + file.name;
+      // file.name = filename;
       data.append("name", filename);
       data.append("file", file);
       newPost.photo = filename;
