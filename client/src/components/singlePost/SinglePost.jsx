@@ -5,7 +5,7 @@ import { useLocation } from "react-router";
 import { Context } from "../../context/Context";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-// import { API_URL } from "../../App";
+import { API_URL } from "../../App";
 
 export default function SinglePost(){
   const location = useLocation();
@@ -17,9 +17,10 @@ export default function SinglePost(){
   const [desc, setDesc] = useState("");
   const [updateMode, setUpdateMode] = useState(false);
 
+
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get(`/posts/` + path);
+      const res = await axios.get(`${API_URL}/posts/` + path);
       setPost(res.data);
       setTitle(res.data.title);
       setDesc(res.data.desc);
@@ -29,7 +30,7 @@ export default function SinglePost(){
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`/posts/${post._id}`, {
+      await axios.delete(`${API_URL}/posts/${post._id}`, {
         data: { username: user.username },
       });
       window.location.replace("/");
@@ -38,7 +39,7 @@ export default function SinglePost(){
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`/posts/${post._id}`, {
+      await axios.put(`${API_URL}/posts/${post._id}`, {
         username: user.username,
         title,
         desc,
@@ -57,7 +58,7 @@ export default function SinglePost(){
           <input
             type="text"
             value={title}
-            className="postTitleInput"
+            className="singlePostTitleInput"
             autoFocus
             onChange={(e) => setTitle(e.target.value)}
           />

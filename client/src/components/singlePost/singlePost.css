@@ -7,7 +7,7 @@
     padding-right: 0;
 }
   
-.postImage {
+.postImg {
     width: 90%;
     max-height: 300px;
     border-radius: 5px;
@@ -67,7 +67,7 @@
     font-weight: 600;
 }
 
-.singlepostTitleInput {
+.singlePostTitleInput {
     margin: 10px;
     font-family: "Lora", serif;
     font-size: 28px;
@@ -78,7 +78,7 @@
     margin-left: 400px;
   }
 
-  .singlepostTitleInput:focus {
+  .singlePostTitleInput:focus {
     outline: none;
   }
 
