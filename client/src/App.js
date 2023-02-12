@@ -16,7 +16,7 @@ import {
 } from "react-router-dom";
 // import About from "./pages/about/About";
 
-export const API_URL = "https://blog-api-qbv8.onrender.com/api/v1"
+export const API_URL = "http://localhost:5000/api/v1"
 
 function App() {
   const { user } = useContext(Context);
