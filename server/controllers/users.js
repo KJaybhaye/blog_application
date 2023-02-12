@@ -6,7 +6,6 @@ const {Unathorized} = require("../error");
 const {CustomError} = require("../error");
 
 const updateUser = async (req, res, next) => {
-  console.log(updateUser);
   if (req.body.userId === req.params.id) {
     if (req.body.password) {
       const salt = await bcrypt.genSalt(10);
@@ -30,7 +29,6 @@ const updateUser = async (req, res, next) => {
 }
 
 const deleteUser = async (req, res, next) => {
-  console.log(deleteUser);
   if (req.body.userId === req.params.id) {
     try {
       const user = await User.findById(req.params.id);
@@ -50,7 +48,6 @@ const deleteUser = async (req, res, next) => {
 }
 
 const getUser = async (req, res, next) => {
-  console.log(getUser);
   try {
     const user = await User.findById(req.params.id);
     const { password, ...others } = user._doc;

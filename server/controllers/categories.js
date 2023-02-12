@@ -1,8 +1,6 @@
 const Category = require("../models/Category");
 
 const createCat = async (req, res, next) => {
-    console.log("reg");
-    console.log("crate cat")
     const newCat = new Category(req.body);
     try {
         const savedCat = await newCat.save();
@@ -13,8 +11,6 @@ const createCat = async (req, res, next) => {
 }
 
 const getCat = async (req, res, next) => {
-    console.log("login");
-    console.log("get cat");
     try {
         const cats = await Category.find();
         res.status(200).json(cats);

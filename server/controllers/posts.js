@@ -3,7 +3,6 @@ const Post = require("../models/Post");
 
 
 const createPost = async (req, res, next) => {
-    console.log("createpost");
     const newPost = new Post(req.body);
     try {
         const savedPost = await newPost.save();
@@ -14,7 +13,6 @@ const createPost = async (req, res, next) => {
 }
 
 const updatePost = async (req, res, next) => {
-    console.log("updatepost");
     try {
         const post = await Post.findById(req.params.id);
         if (post.username === req.body.username) {
@@ -39,7 +37,6 @@ const updatePost = async (req, res, next) => {
 }
 
 const deletePost = async (req, res, next) => {
-    console.log("delpost");
     try {
         const post = await Post.findById(req.params.id);
         if (post.username === req.body.username) {
@@ -58,7 +55,6 @@ const deletePost = async (req, res, next) => {
 }
 
 const getPost = async (req, res, next) => {
-    console.log("getpost");
     try {
         const post = await Post.findById(req.params.id);
         res.status(200).json(post);
@@ -68,7 +64,6 @@ const getPost = async (req, res, next) => {
 }
 
 const getAllPosts = async (req, res, next) => {
-    console.log("allpost");
     const username = req.query.user;
     const catName = req.query.cat;
     try {

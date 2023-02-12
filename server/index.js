@@ -82,7 +82,7 @@ app.post("/api/v1/upload", upload.single("file"), (req, res) => {
 app.get("/api/v1/images/:id",  (req, res) => {
   ImageModel.find({name: req.params.id}, (err, images) => {
     if (err) {
-        console.log(err);
+        // console.log(err);
         res.status(500).send("An error occurred", err);
     } else {
         res.status(200).send(images);
