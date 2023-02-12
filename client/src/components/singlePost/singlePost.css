@@ -12,7 +12,7 @@
     max-height: 300px;
     border-radius: 5px;
     object-fit: cover;
-    margin:0 5% 0 5%;
+    margin:5% 5% 0 5%;
 }
   
 .singlepostTitle {
@@ -21,7 +21,7 @@
     font-size: 28px;
     font-family: "Lora", sans-serif;
     margin-top: 140px;
-    margin-left: 50px;
+    margin-left: 60px;
 }
   
 .postEdit{
@@ -58,7 +58,8 @@
     color: #666;
     font-size: 18px;
     line-height: 25px;
-    margin-left: 200px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
   
 .postBody::first-letter {
