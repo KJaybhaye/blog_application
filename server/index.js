@@ -4,6 +4,7 @@ const users = require("./routes/users");
 const posts = require("./routes/posts");
 const cats = require("./routes/categories");
 const auth = require("./routes/auth");
+const images = require("./routes/images");
 const multer = require("multer");
 const path = require("path");
 require("express-async-errors")
@@ -29,68 +30,29 @@ app.use("/api/v1/users", users);
 app.use("/api/v1/posts", posts);
 app.use("/api/v1/cats", cats);
 app.use("/api/v1/auth", auth);
+app.use("/api/v1/images", images);
 
 
 // app.use(notFound);
 // app.use(errorHandler);
-// var storage = multer.diskStorage({
-//   destination: function (req, file, cb) {
-//     cb(null, __dirname + '/images')      //you tell where to upload the files,
-//   },
-//   filename: function (req, file, cb) {
-//     cb(null, req.body.name)
-//   }
-// })
+// var storage = multer.memoryStorage(); 
+const upload = multer()
 
-// var upload = multer({storage: storage,
-//     onFileUploadStart: function (file) {
-//       console.log(file.originalname + ' is starting ...')
-//     },
-// });
-
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, "images");
-  },
-  filename: function (req, file, cb) {
-    cb(
-      null,
-      req.body.name
-    );
-  },
-});
-const upload = multer({ storage: storage });
-
-// app.post('/api/v1/upload', upload.single('file'), function (req, res, next) {
-//   res.send("image uploaded!");
-// })
-app.post("/api/v1/upload", upload.single("file"), (req, res) => {
-  const obj = {
-      img: {
-          data: fs.readFileSync(path.join(__dirname + "/images/" + req.body.name)),
-          contentType: "image/jpeg"
-      }
-  }
+app.post("/api/v1/upload", upload.any(), (req, res) => {
+  var image = {};
+	image['data'] = req.files[0].buffer;
+	image['contentType'] = req.files[0].mimetype;
   const newImage = new ImageModel({
-      image: obj.img
+      image: image,
+      name: req.body.name
   });
   newImage.save((err) => {
-      err ? console.log(err) : res.redirect("/");
+      if(err){
+        return res.status(500).send("error while uploading!");
+        console.log(err);
+      }else{return res.send("upload successfule");}
   });
 });
-
-app.get("/api/v1/images/:id",  (req, res) => {
-  ImageModel.find({name: req.params.id}, (err, images) => {
-    if (err) {
-        // console.log(err);
-        res.status(500).send("An error occurred", err);
-    } else {
-        res.status(200).send(images);
-    }
-  });
-});
-
-
 
 const start = async () => {
     try{

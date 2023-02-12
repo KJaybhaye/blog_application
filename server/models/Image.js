@@ -6,5 +6,5 @@ const imageSchema = new mongoose.Schema({
         data: Buffer,
         contentType: String
     }
-});
+},{timestamps: true});
 module.exports = mongoose.model("Image", imageSchema);
