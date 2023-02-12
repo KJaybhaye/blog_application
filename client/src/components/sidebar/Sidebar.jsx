@@ -3,6 +3,7 @@ import "./sidebar.css";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from "react";
+import { API_URL } from "../../App";
 
 
 
@@ -12,7 +13,7 @@ export default function Sidebar(){
 
     useEffect(() => {
       const getCats = async () => {
-        const res = await axios.get("/cats");
+        const res = await axios.get(`${API_URL}/cats`);
         setCats(res.data);
       };
       getCats();

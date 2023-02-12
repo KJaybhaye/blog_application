@@ -6,7 +6,7 @@ import Posts from '../../components/posts/Posts';
 import axios from "axios";
 import { useLocation } from "react-router";
 import { useEffect, useState } from "react";
-// import { API_URL } from "../../App";
+import { API_URL } from "../../App";
 
 export default function Home(){
 
@@ -15,7 +15,7 @@ export default function Home(){
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get(`/posts` + search);
+      const res = await axios.get(`${API_URL}/posts` + search);
       setPosts(res.data);
     };
     fetchPosts();

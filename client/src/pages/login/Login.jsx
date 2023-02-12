@@ -4,7 +4,7 @@ import axios from "axios";
 import { useContext, useRef } from "react";
 import { Context } from "../../context/Context";
 // import { useDispatch } from 'react-redux';
-// import { API_URL } from "../../App";
+import { API_URL } from "../../App";
 
 
 
@@ -17,7 +17,7 @@ export default function Login() {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
     try {
-      const res = await axios.post(`/auth/login`, {
+      const res = await axios.post(`${API_URL}/auth/login`, {
         username: userRef.current.value,
         password: passwordRef.current.value,
       });
