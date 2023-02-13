@@ -2,14 +2,13 @@
     flex: 9;
 }
   
-.postWrapper {
-    padding: 20px;
-    padding-right: 0;
-}
+/* .postWrapper {
+   
+} */
   
-.postImg {
-    width: 90%;
-    max-height: 300px;
+.singlePostImg {
+    width: 90vw;
+    height: min(300px, 60vw);
     border-radius: 5px;
     object-fit: cover;
     margin:5% 5% 0 5%;
@@ -17,16 +16,16 @@
   
 .singlepostTitle {
     text-align: center;
-    margin: 10px;
-    font-size: 28px;
+    margin: 1vh 1vw 1vh 1vw;
+    font-size: min(28px, 7vw);
     font-family: "Lora", sans-serif;
-    margin-top: 140px;
-    margin-left: 60px;
+    margin-top: 4vh;
+    /* margin-left: 60px; */
 }
   
 .postEdit{
     float: right;
-    font-size: 16px;
+    font-size: min(16px, 4vw);
 }
   
 .postIcon{

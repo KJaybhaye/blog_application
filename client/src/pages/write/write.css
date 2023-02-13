@@ -1,11 +1,11 @@
 .write {
-    padding-top: 50px;
+    padding-top: 2vh;
   }
   
   .writeImg {
-    margin-left: 195px;
+    margin-left: min(160px, 16vw);
     width: 70vw;
-    height: 250px;
+    height: max(17vw, 25vh);
     border-radius: 10px;
     object-fit: cover;
   }
@@ -15,14 +15,15 @@
   }
   
   .writeFormGroup {
-    margin-left: 150px;
+    /* margin-left: 150px; */
+    margin-left: min(150px, 7vw);
     display: flex;
     align-items: center;
   }
   
   .writeIcon {
-    width: 25px;
-    height: 25px;
+    width: min(25px,4vw);
+    height: min(25px,4vw);
     border-radius: 50%;
     border: 1px solid;
     display: flex;
@@ -44,7 +45,8 @@
     font-size: 20px;
     border: none;
     padding: 20px;
-    margin-left: 25px;
+    /* margin-left: 25px; */
+    margin-left: min(25px, 4vw);
     width: 70vw;
     height: 30vw;
   }

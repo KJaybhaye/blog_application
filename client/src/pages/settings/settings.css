@@ -1,10 +1,13 @@
 .settings {
     display: flex;
+    width: min(800px, 100vw);
+    margin: auto;
+    margin-top: 8vh;
   }
   
 .settingsWrapper {
     flex: 9;
-    padding: 20px;
+    padding: 20px
   }
   
   .settingsTitle {
@@ -14,14 +17,14 @@
   }
   
   .settingsTitleUpdate {
-    font-size: 30px;
+    font-size: min(30px, 8vw);
     margin-bottom: 20px;
     color: lightcoral;
   }
   
   .settingsTitleDelete {
     color: red;
-    font-size: 12px;
+    font-size: min(12px, 4vw);
     cursor: pointer;
   }
   
@@ -38,8 +41,8 @@
   }
   
   .settingsPP > img {
-    height: 70px;
-    width: 70px;
+    height: min(80px, 20vw);
+    width: min(80px, 20vw);
     border-radius: 20%;
     object-fit: cover;
   }

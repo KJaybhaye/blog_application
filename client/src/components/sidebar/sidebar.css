@@ -1,7 +1,7 @@
 .sideBar{
     flex:3;
-    margin: 20px;
-    padding-bottom: 20px;
+    margin: min(2vw, 20px);
+    padding-bottom: min(2vh, 20px);
     background-color:aliceblue;
     border-radius: 5%;
 }
@@ -13,12 +13,12 @@
 }
 
 .sideBarIcons{
-    margin-right: 25px;
+    margin-right: min(3vw, 20px);
 }
 
 .sideBarItem{
     /* margin: 5px; */
-    margin-right: 19px;
+    margin-right: min(2vw, 20px);
     text-align: center;
 }
 
@@ -31,11 +31,14 @@
 
 .sideBarList{
     list-style: none;
-    margin-bottom: 20px;
+    margin-bottom: 2vh;
+    /* width: min(5vw, 20px); */
+    /* font-size: min(20px, 2vw); */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .sideBar li{
-    display: inline-block;
-    width: 49%;
     text-align: center;
 }

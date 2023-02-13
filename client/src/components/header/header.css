@@ -1,5 +1,5 @@
 .header{
-    margin-top: 100px;
+    margin-top: 15vh;
 }
 
 .headTitles{
@@ -13,18 +13,18 @@
 .headTitle1{
     position: absolute;
     top: 11%;
-    font-size: 20px;
+    font-size: min(5vw,20px);
     /* font-family: 'Josefin Sans', sans-serif; */
 }
 
 .headTitle2{
     position: absolute;
     top: 14%;
-    font-size: 80px;
+    font-size: min(20vw,80px);
 }
 
 .headerImage{
-    width: 100%;
+    width: 100vw;
     max-height: 600px;
     /* margin-top: 60px; */
 
